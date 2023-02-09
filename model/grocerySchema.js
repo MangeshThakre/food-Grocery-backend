@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const grocerySchema = new Schema(
   {
     itemName: { type: String, require: [true, "Item name is Require"] },
-    unit: { type: String },
+    unit: { type: String, default: "kilogram" },
     quantity: { type: Number }
   },
   { timestamps: true }
