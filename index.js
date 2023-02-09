@@ -14,7 +14,7 @@ mongoDBConnect();
 // routes
 app.use("/api", groceryRouter);
 app.use("/", (req, res) => {
-  res.status(200).json({ data: "tonnected to the grocery server" });
+  res.status(200).json({ data: "connected to the grocery server" });
 });
 
 app.listen(PORT, () =>
