@@ -8,6 +8,9 @@ const groceryRouter = require("./routers/groceryRouter");
 app.use(express.json());
 app.use(cors());
 
+// connect to database
+mongoDBConnect();
+
 // routes
 app.use("/api", groceryRouter);
 app.use("/", (req, res) => {

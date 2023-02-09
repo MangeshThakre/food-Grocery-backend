@@ -11,6 +11,6 @@ const grocerySchema = new Schema(
 );
 
 //  search index on itemName field
-userSchema.index({ itemName: "text" });
-const groceryModel = grocerySchema("grocery", grocerySchema);
+grocerySchema.index({ itemName: "text" });
+const groceryModel = mongoose.model("grocery", grocerySchema);
 module.exports = groceryModel;
